@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circuito Cero - Soluciones pro Tecnológicas</title>
+    <title>Circuito Cero - Soluciones Tecnológicas</title>
     <style>
-        /* --- ESTILOS GENERALES (RESET) --- */
+        /* --- ESTILOS GENERALES --- */
         :root {
-            --color-fondo: #ffffff; /* Blanco */
-            --color-principal: #ff0000; /* Rojo vibrante */
-            --color-secundario: #000000; /* Negro */
-            --color-acento: #333333; /* Gris oscuro para detalles pequeños */
+            --color-fondo: #ffffff;
+            --color-principal: #ff0000;
+            --color-secundario: #000000;
+            --color-acento: #333333;
             --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             --sombra-suave: 0 4px 6px rgba(0, 0, 0, 0.1);
             --radio-borde: 8px;
@@ -25,7 +25,6 @@
             line-height: 1.6;
         }
 
-        /* --- ENCABEZADO (HEADER) --- */
         header {
             background-color: var(--color-secundario);
             color: var(--color-fondo);
@@ -44,7 +43,7 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--color-principal); /* El logo destaca en rojo */
+            color: var(--color-principal);
         }
 
         nav ul {
@@ -62,31 +61,16 @@
             transition: color 0.3s ease;
         }
 
-        nav a:hover {
-            color: var(--color-principal); /* Detalle: hover rojo en el menú */
-        }
+        nav a:hover { color: var(--color-principal); }
 
-        /* --- SECCIÓN HERO (PORTADA) --- */
         .hero {
             padding: 4rem 2rem;
             text-align: center;
-            background: linear-gradient(135deg, #fdfdfd 0%, #f4f4f4 100%); /* Fondo blanco texturizado */
+            background: linear-gradient(135deg, #fdfdfd 0%, #f4f4f4 100%);
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--color-secundario);
-        }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 2rem auto;
-            color: var(--color-acento);
-        }
-
-        /* --- BOTONES PRINCIPALES (ROJO/NEGRO) --- */
         .cta-button {
             display: inline-block;
             padding: 12px 30px;
@@ -100,74 +84,30 @@
             border: 2px solid transparent;
         }
 
-        /* Botón Primario: Rojo con texto blanco */
-        .btn-rojo {
-            background-color: var(--color-principal);
-            color: var(--color-fondo);
-        }
-
-        .btn-rojo:hover {
-            background-color: var(--color-secundario); /* Cambia a negro al hover */
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(255, 0, 0, 0.2);
-        }
-
-        /* Botón Secundario: Negro con texto blanco */
-        .btn-negro {
-            background-color: var(--color-secundario);
-            color: var(--color-fondo);
-            margin-left: 10px;
-        }
-
-        .btn-negro:hover {
-            background-color: var(--color-principal); /* Cambia a rojo al hover */
+        .btn-rojo { background-color: var(--color-principal); color: var(--color-fondo); }
+        .btn-negro { background-color: var(--color-secundario); color: var(--color-fondo); margin-left: 10px; }
+        
+        .btn-rojo:hover, .btn-negro:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
-        /* --- BANDEJA DE CONTENIDO (CONTENEDOR) --- */
-        .tray-section {
-            padding: 3rem 2rem;
-            background-color: var(--color-fondo);
-        }
-
+        .tray-section { padding: 3rem 2rem; }
         .tray-container {
-            background-color: #f9f9f9; /* Fondo gris muy tenue para la bandeja */
-            border: 2px solid var(--color-secundario); /* Borde negro fuerte */
+            background-color: #f9f9f9;
+            border: 2px solid var(--color-secundario);
             border-radius: var(--radio-borde);
             padding: 2rem;
             max-width: 800px;
             margin: 0 auto;
-            box-shadow: var(--sombra-suave);
         }
 
         .tray-header {
-            border-bottom: 2px solid var(--color-principal); /* Detalle: línea roja divisoria */
+            border-bottom: 2px solid var(--color-principal);
             padding-bottom: 1rem;
             margin-bottom: 1.5rem;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-        }
-
-        .tray-title {
-            margin: 0;
-            color: var(--color-secundario);
-            font-size: 1.5rem;
-        }
-
-        .tray-status {
-            background-color: var(--color-principal); /* 'Bandeja' de estado en rojo */
-            color: var(--color-fondo);
-            padding: 4px 10px;
-            font-size: 0.8rem;
-            border-radius: 20px;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-
-        .tray-content {
-            color: var(--color-acento);
         }
 
         .tray-item {
@@ -175,65 +115,18 @@
             padding: 1rem;
             margin-bottom: 1rem;
             border-radius: 4px;
-            border-left: 4px solid var(--color-secundario); /* Detalle negro en cada ítem */
+            border-left: 4px solid var(--color-secundario);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .tray-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .item-info strong {
-            color: var(--color-secundario);
-        }
-
-        /* --- PIE DE PÁGINA (FOOTER) --- */
         footer {
             background-color: var(--color-acento);
             color: #ccc;
             text-align: center;
             padding: 2rem;
             margin-top: 4rem;
-            font-size: 0.9rem;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        /* --- RESPONSIVIDAD (MÓVILES) --- */
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            nav ul {
-                margin-top: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .cta-button {
-                width: 100%;
-                margin: 10px 0;
-            }
-
-            .btn-negro {
-                margin-left: 0;
-            }
-
-            .tray-item {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
         }
     </style>
 </head>
@@ -252,43 +145,67 @@
 
     <section class="hero" id="inicio">
         <h1>Potencia tu Conectividad</h1>
-        <p>Soluciones integrales en redes, seguridad y mantenimiento digital. Innovación a tu alcance.</p>
-        
+        <p>Soluciones integrales en redes y seguridad digital.</p>
         <a href="#servicios" class="cta-button btn-rojo">Ver Servicios</a>
-        <a href="#contacto" class="cta-button btn-negro">Solicitar Demo</a>
+        <a href="#contacto" class="cta-button btn-negro" id="btnDemo">Solicitar Demo</a>
     </section>
 
     <section class="tray-section" id="servicios">
         <div class="tray-container">
             <div class="tray-header">
-                <h2 class="tray-title">Panel de Control</h2>
-                <span class="tray-status">Activo</span>
+                <h2>Panel de Control</h2>
+                <span style="background:red; color:white; padding:5px 10px; border-radius:20px; font-size:0.8rem;">ACTIVO</span>
             </div>
             
-            <div class="tray-content">
-                <p>Bienvenido al panel de administración de Circuito Cero. Aquí puedes gestionar tus servicios activos y ver actualizaciones del sistema.</p>
-                
-                <div class="tray-item">
-                    <div class="item-info">
-                        <strong>Red Principal:</strong> <span style="color: green;">Estable</span>
-                    </div>
-                    <a href="#" class="cta-button btn-negro" style="padding: 5px 15px; font-size: 0.8rem;">Gestionar</a>
-                </div>
-
-                <div class="tray-item">
-                    <div class="item-info">
-                        <strong>Última Copia de Seguridad:</strong> Hace 2 horas
-                    </div>
-                    <a href="#" class="cta-button btn-rojo" style="padding: 5px 15px; font-size: 0.8rem;">Descargar</a>
-                </div>
+            <div class="tray-item">
+                <div><strong>Red Principal:</strong> <span style="color: green;">Estable</span></div>
+                <button class="cta-button btn-negro" id="btnGestionar" style="padding: 5px 15px; font-size: 0.8rem;">Gestionar</button>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2023 Circuito Cero. Todos los derechos reservados.</p>
-        <p>Soporte Técnica | Términos de Servicio</p>
+        <p>&copy; 2026 Circuito Cero. Tecnología para Ingeniería.</p>
     </footer>
+
+    <script>
+        // Esta función envía los datos a tu n8n en Render
+        async function conectarConAgente(accion) {
+            // USA TU URL DE RENDER AQUÍ (Webhook de producción o test)
+            const n8n_url = 'https://n8n-tu-app.onrender.com/webhook-test/contacto-circuito-cero';
+            
+            console.log("Iniciando conexión con n8n para:", accion);
+
+            try {
+                const respuesta = await fetch(n8n_url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        evento: accion,
+                        sitio: "Circuito Cero Web",
+                        usuario_id: "Admin_Test",
+                        fecha: new Date().toLocaleString()
+                    })
+                });
+
+                if (respuesta.ok) {
+                    alert("¡Agente n8n activado con éxito! Acción: " + accion);
+                } else {
+                    alert("Error: n8n respondió pero con error.");
+                }
+            } catch (err) {
+                console.error("Fallo de red:", err);
+                alert("No se pudo conectar con n8n. Revisa si está encendido en Render.");
+            }
+        }
+
+        // Eventos para los botones
+        document.getElementById('btnGestionar').addEventListener('click', () => conectarConAgente('Gestionar Red'));
+        document.getElementById('btnDemo').addEventListener('click', (e) => {
+            e.preventDefault();
+            conectarConAgente('Solicitud de Demo');
+        });
+    </script>
 
 </body>
 </html>
